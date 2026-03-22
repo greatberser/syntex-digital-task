@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heaven Flow</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Layout start: 2026-03-21 11:33 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SVG спрайт (вбудований для підтримки currentColor і без CORS) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-chevron-down" viewBox="0 0 12 12" fill="none">
+      <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-chevron-down-toc" viewBox="0 0 24 21" fill="none">
+      <path d="M1.5 5.25L12 15.25L22 5.25" stroke="#191D36" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 48 48" fill="none">
+      <path d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="#34B264"/>
+      <path d="M25.0607 10.9393C24.4749 10.3536 23.5251 10.3536 22.9393 10.9393L13.3934 20.4853C12.8076 21.0711 12.8076 22.0208 13.3934 22.6066C13.9792 23.1924 14.9289 23.1924 15.5147 22.6066L24 14.1213L32.4853 22.6066C33.0711 23.1924 34.0208 23.1924 34.6066 22.6066C35.1924 22.0208 35.1924 21.0711 34.6066 20.4853L25.0607 10.9393ZM25.5 35L25.5 12L22.5 12L22.5 35L25.5 35Z" fill="white"/>
+    </symbol>
+    <symbol id="icon-list" viewBox="0 0 16 16" fill="none">
+      <path d="M2 4h12M2 8h8M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-new" viewBox="0 0 22 22" fill="none">
+      <path d="M4.48557 10.7308V13.4004C4.48557 13.9493 4.40495 14.4947 4.24792 15.0099C4.07827 15.5385 3.83711 16.0363 3.53497 16.4842L2.83813 17.4937C2.60258 17.8323 2.57524 18.2698 2.76593 18.6357C2.95731 19.0024 3.33447 19.2309 3.74668 19.2309H7.93539C8.26207 20.8096 9.66275 22 11.3368 22C13.0109 22 14.4116 20.8096 14.7383 19.2309H18.927C19.3399 19.2309 19.7163 19.0031 19.9077 18.6357C20.0984 18.2705 20.0711 17.8323 19.8369 17.4951L19.1422 16.4898C18.5183 15.5673 18.1888 14.5024 18.1888 13.4102V10.7308C18.1888 8.89618 17.4751 7.17233 16.1838 5.88031C15.5185 5.20661 14.7179 4.68995 13.8374 4.34714C14.0029 3.75406 14.1017 3.18272 14.1017 2.7649C14.1017 1.24014 12.8609 0 11.3368 0C9.81277 0 8.57193 1.24084 8.57193 2.7649C8.57193 3.17991 8.67078 3.75336 8.83692 4.35275C6.24308 5.35874 4.48557 7.88318 4.48557 10.7308ZM11.3375 20.5972C10.443 20.5972 9.67887 20.0266 9.38934 19.2302H13.2857C12.9962 20.0266 12.2321 20.5972 11.3375 20.5972ZM11.3375 1.40208C12.089 1.40208 12.7003 2.01338 12.7003 2.7649C12.7003 3.00956 12.633 3.45262 12.4893 3.96998C12.4774 3.96858 12.4669 3.96648 12.455 3.96508C12.1283 3.89988 11.7631 3.86763 11.3368 3.86763C10.9106 3.86763 10.5454 3.89918 10.2572 3.95807C10.2327 3.96157 10.2082 3.96508 10.1836 3.96928C10.0399 3.45051 9.97401 3.01447 9.97401 2.7642C9.97401 2.01268 10.5853 1.40138 11.3368 1.40138L11.3375 1.40208ZM9.91232 5.47021C10.1051 5.41202 10.2881 5.37066 10.4949 5.33981C10.7297 5.29284 11.0059 5.26971 11.3375 5.26971C11.6691 5.26971 11.9453 5.29284 12.2187 5.34612C12.4115 5.37416 12.6043 5.42043 12.788 5.466C13.6944 5.70926 14.5237 6.19298 15.1904 6.86808C16.221 7.8986 16.7881 9.27054 16.7881 10.7308V13.4102C16.7881 14.7828 17.201 16.1197 17.9862 17.2806L18.3647 17.8281H14.1277C14.1214 17.8281 14.1164 17.8246 14.1108 17.8246H8.56562C8.55931 17.8246 8.5544 17.8281 8.5488 17.8281H4.31172L4.69448 17.2736C5.07445 16.71 5.37379 16.0923 5.58691 15.4278C5.7867 14.7695 5.88835 14.0867 5.88835 13.3997V10.7301C5.88835 8.26805 7.53579 6.10675 9.91302 5.4695L9.91232 5.47021Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 15 15" fill="none">
+      <path opacity="0.5" d="M12.1702 14.5145L7.5 9.84424L2.82982 14.5145C2.18242 15.1618 1.13287 15.1618 0.485466 14.5145C-0.161822 13.8671 -0.161822 12.8176 0.485466 12.1702L5.15576 7.5L0.485466 2.82982C-0.161822 2.18242 -0.161822 1.13287 0.485466 0.485466C1.13287 -0.161822 2.18242 -0.161822 2.82982 0.485466L7.5 5.15576L12.1702 0.485466C12.8176 -0.161822 13.8671 -0.161822 14.5145 0.485466C15.1618 1.13287 15.1618 2.18242 14.5145 2.82982L9.84424 7.5L14.5145 12.1702C15.1618 12.8176 15.1618 13.8671 14.5145 14.5145C13.8671 15.1618 12.8176 15.1618 12.1702 14.5145Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 22 22" fill="none">
+      <path fill-rule="evenodd" d="M5.2179 21.0858C4.30673 21.0831 3.5703 20.3422 3.57305 19.431C3.57331 19.3398 3.58114 19.2488 3.59646 19.1589L4.52226 13.7603C4.54196 13.6447 4.50367 13.5269 4.41987 13.4449L0.497683 9.6217C-0.153692 8.98728 -0.167458 7.94493 0.466923 7.29356C0.719841 7.03388 1.0514 6.8649 1.41015 6.81289L6.83074 6.02346C6.94681 6.00651 7.04714 5.93367 7.09919 5.82858L9.52297 0.918635C9.92534 0.102965 10.9128 -0.23208 11.7284 0.170292C12.0534 0.33063 12.3164 0.593657 12.4768 0.918635L14.901 5.8303C14.9527 5.93548 15.053 6.0084 15.169 6.02518L20.5896 6.81289C21.4895 6.94337 22.1132 7.77861 21.9827 8.67847C21.9307 9.03722 21.7618 9.36878 21.5021 9.6217L17.5799 13.4449C17.4961 13.5269 17.4578 13.6447 17.4775 13.7603L18.4033 19.1589C18.5572 20.0554 17.9552 20.9068 17.0588 21.0607C16.7018 21.122 16.3346 21.0638 16.0139 20.8952L11.1655 18.3463C11.0618 18.2916 10.9379 18.2916 10.8342 18.3463L5.98582 20.8952C5.74912 21.0202 5.48553 21.0857 5.2179 21.0858ZM10.9999 1.29119C10.8635 1.28891 10.7385 1.36669 10.6802 1.48995L8.25645 6.40161C8.01656 6.88778 7.55272 7.22468 7.01616 7.30246L1.596 8.08845C1.4015 8.11628 1.26637 8.29649 1.29417 8.49103C1.30531 8.56899 1.34201 8.64105 1.39853 8.6959L5.32072 12.5196C5.70877 12.8981 5.88571 13.4433 5.79395 13.9775L4.86858 19.377C4.83549 19.571 4.96584 19.755 5.15978 19.7881C5.23666 19.8012 5.31573 19.7888 5.38482 19.7526L10.2332 17.2041C10.713 16.9516 11.2863 16.9516 11.7661 17.2041L16.6141 19.7526C16.7884 19.8438 17.0036 19.7764 17.0948 19.6021C17.1309 19.533 17.1434 19.4539 17.1303 19.377L16.2054 13.9788C16.1137 13.4446 16.2906 12.8994 16.6786 12.5209L20.6008 8.69762C20.7426 8.56163 20.7473 8.33642 20.6114 8.19458C20.556 8.13689 20.4829 8.0995 20.4037 8.08845L14.9831 7.30074C14.4467 7.22283 13.9829 6.88598 13.7429 6.39989L11.3195 1.48995C11.2612 1.36665 11.1362 1.28891 10.9999 1.29119Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-rocket" viewBox="0 0 22 22" fill="none">
+      <path d="M21.8711 0.139809C21.7854 0.0541011 21.6689 0.00636037 21.5474 0.0110593C21.4766 0.0129388 19.7837 0.0680099 17.5368 0.660446C15.4558 1.2042 12.4942 2.33306 10.2041 4.62312C9.2292 5.59804 8.36047 6.61357 7.61955 7.64432L5.29021 7.93227C5.19285 7.94448 5.10244 7.98865 5.03309 8.05801L0.128947 12.9621C0.00639951 13.0847 -0.0328832 13.2676 0.0287662 13.4296C0.0902278 13.5914 0.240968 13.7021 0.413888 13.7123L4.92332 13.9792C4.89814 14.9517 5.16917 15.7456 5.71706 16.2937C6.26307 16.8397 7.05662 17.1132 8.02797 17.0838L8.29487 21.5931C8.30502 21.766 8.41591 21.9169 8.57793 21.9782C8.62849 21.9976 8.68131 22.0071 8.73394 22.0071C8.84859 22.0071 8.96099 21.9622 9.045 21.8782L13.9491 16.9739C14.0185 16.9045 14.0625 16.8141 14.0745 16.7169L14.363 14.3874C15.3941 13.6461 16.4097 12.7772 17.384 11.8028C19.2179 9.96914 20.5522 7.50373 21.3503 4.47501C21.9427 2.22725 21.998 0.534516 21.9999 0.463469C22.0032 0.342613 21.9568 0.225517 21.8711 0.139809ZM20.6266 3.74048C20.1293 3.48298 19.673 3.1503 19.2668 2.74412C18.8606 2.33795 18.5279 1.88159 18.2704 1.38426C19.4995 1.09406 20.5203 0.972453 21.0879 0.923208C21.0388 1.48989 20.9172 2.50918 20.6266 3.74048ZM16.7619 11.1809C15.7729 12.1699 14.7416 13.0449 13.6967 13.7816C13.5952 13.8532 13.5287 13.9641 13.5136 14.0871L13.2201 16.4589L9.1153 20.5638L8.87979 16.5882C8.87284 16.4677 8.81645 16.3553 8.72397 16.2775C8.64428 16.2106 8.54391 16.1741 8.44072 16.1741C8.42418 16.1741 8.40764 16.1751 8.3911 16.1769C7.75713 16.2489 6.88746 16.2196 6.33919 15.6715C5.89656 15.2291 5.72552 14.5374 5.83021 13.6159C5.84374 13.4959 5.80747 13.3755 5.72965 13.2832C5.65203 13.1905 5.53963 13.1343 5.41915 13.1272L1.44351 12.892L5.54827 8.78709L7.91971 8.49388C8.04301 8.47847 8.1539 8.41193 8.22533 8.31062C8.96155 7.26615 9.83667 6.23484 10.8263 5.24525C12.8515 3.22003 15.4579 2.15639 17.4056 1.60774C17.715 2.25506 18.1261 2.84769 18.6448 3.36607C19.163 3.88464 19.7553 4.2957 20.4024 4.60507C19.8496 6.55361 18.782 9.16056 16.7619 11.1809Z" fill="currentColor"/>
+      <path d="M14.883 4.22855C14.0855 5.02567 14.0873 6.32482 14.8867 7.12419C15.2854 7.52285 15.8092 7.72208 16.3327 7.72208C16.8563 7.72208 17.38 7.52285 17.7788 7.12419C18.5759 6.3267 18.5759 5.02942 17.7788 4.23212C16.9794 3.43293 15.6805 3.43143 14.883 4.22855ZM17.1567 6.50206C16.7018 6.95635 15.9631 6.95597 15.5089 6.50206C15.0527 6.04551 15.0508 5.30497 15.5049 4.85068C15.7316 4.62419 16.0293 4.51104 16.3274 4.51104C16.6274 4.51104 16.9279 4.62551 17.1567 4.85425C17.6108 5.30854 17.6108 6.04777 17.1567 6.50206Z" fill="currentColor"/>
+      <path d="M3.41328 16.2637C3.41215 16.2637 3.4114 16.2637 3.41046 16.2637C2.79001 16.2637 2.20641 16.5058 1.76697 16.9454C0.974174 17.738 0.274039 20.7492 0.141906 21.3449C0.109389 21.4918 0.153935 21.6452 0.260506 21.7516C0.343958 21.8349 0.45598 21.8802 0.571384 21.8802C0.603337 21.8802 0.635665 21.8768 0.66743 21.8696C1.26212 21.7366 4.26923 21.0329 5.06165 20.2404C5.50165 19.8004 5.74393 19.2161 5.74393 18.5951C5.74393 17.9739 5.50165 17.3897 5.06165 16.9499C4.61995 16.508 4.03466 16.2644 3.41328 16.2637ZM4.43951 19.6183C4.04255 20.0153 2.43158 20.5222 1.16551 20.8451C1.48673 19.5779 1.99158 17.9647 2.3891 17.5675C2.66258 17.294 3.02515 17.1435 3.41046 17.1435H3.41215C3.79877 17.1439 4.16378 17.2963 4.43951 17.572C4.71318 17.8457 4.86411 18.2092 4.86411 18.5951C4.86411 18.9811 4.71318 19.3445 4.43951 19.6183Z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <!-- ===== 1. HEADER ===== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="logo">
+          <img src="logo.svg" alt="Heaven Flow" class="logo__img" width="40" height="45">
+          <span class="logo__text">HEAVEN FLOW</span>
+        </a>
+
+        <nav class="nav">
+          <a href="#" class="nav__link">Crash</a>
+          <a href="#" class="nav__link">Live Casino</a>
+          <span class="nav__link nav__link--dropdown">
+            TOP Providers
+            <svg width="12" height="12"><use href="#icon-chevron-down"/></svg>
+          </span>
+        </nav>
+
+        <div class="header__actions">
+          <a href="#" class="btn btn--green js-open-modal">Register Now</a>
+          <div class="lang" id="langToggle">
+            <span class="lang__current">
+              EN
+              <svg width="12" height="12"><use href="#icon-chevron-down"/></svg>
+            </span>
+            <div class="lang__dropdown">
+              <button class="lang__option lang__option--active">EN</button>
+              <button class="lang__option">UA</button>
+            </div>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#" class="nav__link">Crash</a>
+    <a href="#" class="nav__link">Live Casino</a>
+    <a href="#" class="nav__link">TOP Providers</a>
+    <a href="#" class="btn btn--green" style="align-self: flex-start;">Register Now</a>
+  </div>
+
+  <!-- ===== 2. HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Game Design<br>for Websites</h1>
+          <p class="hero__subtitle">Transforming Your Interface into an Engaging Game</p>
+          <div class="hero__actions">
+            <a href="#" class="btn btn--black">Copy Promo Code</a>
+            <a href="#" class="btn btn--green js-open-modal">Register Now</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <img src="img_hero.png" alt="" class="hero__blob">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMO BAR ===== -->
+  <div class="promo-bar">
+    <div class="container">
+      <div class="promo-bar__inner">
+        <span class="promo-bar__text">Join us and become a GAME DESIGN MASTER!</span>
+        <a href="#" class="btn btn--green js-open-modal">Register Now</a>
+      </div>
+      <button class="promo-bar__scroll" aria-label="Scroll to top">
+        <svg width="22" height="22"><use href="#icon-arrow-up"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc__toggle" id="tocToggle">
+      TABLE OF CONTENTS
+      <svg class="toc__arrow" width="24" height="21"><use href="#icon-chevron-down-toc"/></svg>
+    </div>
+    <ol class="toc__list" id="tocList">
+      <li class="toc__item"><a href="#">Tools and Platforms for Implementing Gamification</a></li>
+      <li class="toc__item"><a href="#">Gamification as a Key Element</a></li>
+      <li class="toc__item"><a href="#">Key Takeaways and Recommendations for Successful Gamification on Your Website</a></li>
+      <li class="toc__item"><a href="#">Advantages and Disadvantages</a></li>
+      <li class="toc__item"><a href="#">Theoretical and Practical Aspects</a></li>
+      <li class="toc__item"><a href="#">Adapting to Different Niches</a></li>
+      <li class="toc__item"><a href="#">Long-Term Results</a></li>
+      <li class="toc__item"><a href="#">Key Takeaways and Recommendations for Successful</a></li>
+      <li class="toc__item"><a href="#">FAQ</a></li>
+    </ol>
+  </div>
+
+  <!-- ===== 3. INTERACTIVE MODULES ===== -->
+  <section class="modules">
+    <div class="container">
+      <h2 class="section-title">Interactive Modules</h2>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true">
+          <svg width="22" height="22"><use href="#icon-star"/></svg> Featured
+        </button>
+        <button class="tab" role="tab" aria-selected="false">
+          <svg width="22" height="22"><use href="#icon-rocket"/></svg> Popular
+        </button>
+        <button class="tab" role="tab" aria-selected="false">
+          <svg width="22" height="22"><use href="#icon-new"/></svg> New
+        </button>
+      </div>
+
+      <div class="modules-grid">
+        <div class="module-card">
+          <div class="module-card__img m1"></div>
+          <p class="module-card__name">Visual Showcase</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m2"></div>
+          <p class="module-card__name">Engagement Boost</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m3"></div>
+          <p class="module-card__name">Content Highlight</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m4"></div>
+          <p class="module-card__name">Smart Display</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m5"></div>
+          <p class="module-card__name">Dynamic Banner</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m6"></div>
+          <p class="module-card__name">Dynamic Banner</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m7"></div>
+          <p class="module-card__name">Visual Showcase</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m8"></div>
+          <p class="module-card__name">Smart Display</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m9"></div>
+          <p class="module-card__name">Content Highlight</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card__img m10"></div>
+          <p class="module-card__name">Engagement Boost</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. HIGHLIGHTS ===== -->
+  <section class="highlights">
+    <div class="container">
+      <h2 class="section-title">Highlights</h2>
+
+      <div class="highlights-grid">
+        <article class="highlight-card">
+          <div class="highlight-card__img h1"></div>
+          <div class="highlight-card__body">
+            <span class="highlight-card__tag">Featured Update</span>
+            <h3 class="highlight-card__title">Access New Platform<br>Features After Registration</h3>
+            <a href="#" class="btn btn--green">Explore</a>
+          </div>
+        </article>
+
+        <article class="highlight-card">
+          <div class="highlight-card__img h2"></div>
+          <div class="highlight-card__body">
+            <span class="highlight-card__tag">Featured Update</span>
+            <h3 class="highlight-card__title">Access New Platform<br>Features After Registration</h3>
+            <a href="#" class="btn btn--green">Explore</a>
+          </div>
+        </article>
+
+        <article class="highlight-card">
+          <div class="highlight-card__img h3"></div>
+          <div class="highlight-card__body">
+            <span class="highlight-card__tag">Featured Update</span>
+            <h3 class="highlight-card__title">Access New Platform<br>Features After Registration</h3>
+            <a href="#" class="btn btn--green">Explore</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. CROSSBRAND ===== -->
+  <section class="crossbrand">
+    <div class="container">
+
+      <h2 class="crossbrand__title">Tools and Platforms for Implementing Gamification</h2>
+      <p class="crossbrand__lead">Have you ever wondered how to make your website not only functional but also engaging? Game design is the art of transforming interaction with digital products into a true adventure. In this webinar, we will show you how to use gamification elements and game design principles to create interfaces that not only capture attention but also hold it.</p>
+
+      <div class="crossbrand__row">
+        <div class="crossbrand__text">
+          <h3 class="crossbrand__subtitle">Gamification as a Key Element</h3>
+          <p class="crossbrand__desc">In this webinar, we will focus on how gamification elements can be integrated into different types of websites. We'll explore how principles like rewards, points, levels, and progress bars can become powerful tools to boost user engagement. Gamification allows you to turn your website into more than just an information tool but into a place where users want to spend more time. In this webinar, we will focus on how gamification elements can be integrated into different types of websites. We'll explore how principles like rewards, points, levels, and progress bars.</p>
+        </div>
+        <div class="crossbrand__img"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+
+    // Language dropdown
+    const langToggle = document.getElementById('langToggle');
+    langToggle.addEventListener('click', (e) => {
+      langToggle.classList.toggle('open');
+      e.stopPropagation();
+    });
+    document.querySelectorAll('.lang__option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        langToggle.querySelector('.lang__current').childNodes[0].textContent = opt.textContent + ' ';
+        document.querySelectorAll('.lang__option').forEach(o => o.classList.remove('lang__option--active'));
+        opt.classList.add('lang__option--active');
+        langToggle.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', () => langToggle.classList.remove('open'));
+
+    // TOC toggle
+    document.getElementById('tocToggle').addEventListener('click', () => {
+      document.querySelector('.toc').classList.toggle('open');
+    });
+
+    // Promo bar + scroll-to-top
+    const promoBar = document.querySelector('.promo-bar');
+    const scrollBtn = document.querySelector('.promo-bar__scroll');
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    window.addEventListener('scroll', () => {
+      promoBar.classList.toggle('visible', window.scrollY > 300);
+    });
+
+    // Tab switching
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+      });
+    });
+  </script>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal" id="registerModal" role="dialog" aria-modal="true">
+    <button class="modal__close" id="modalClose" aria-label="Close">
+      <svg width="15" height="15"><use href="#icon-close"/></svg>
+    </button>
+    <h2 class="modal__title">Registration</h2>
+    <form class="modal__form" onsubmit="return false">
+      <input class="modal__input" type="email" placeholder="Email" required>
+      <input class="modal__input" type="password" placeholder="Password" required>
+      <button class="btn btn--green modal__submit" type="submit">Register Now</button>
+    </form>
+  </div>
+
+  <script>
+    // Modal
+    const modal = document.getElementById('registerModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+    function openModal() { modal.classList.add('open'); modalOverlay.classList.add('open'); }
+    function closeModal() { modal.classList.remove('open'); modalOverlay.classList.remove('open'); }
+    document.querySelectorAll('.js-open-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+    });
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+  </script>
+
+</body>
+</html>
