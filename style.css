@@ -552,16 +552,16 @@ img {
   background: radial-gradient(ellipse at 35% 35%, rgba(255,255,255,0.22) 0%, transparent 65%);
 }
 
-.m1  { background: linear-gradient(140deg, #7c3aed 0%, #6366f1 45%, #a78bfa 100%); }
-.m2  { background: conic-gradient(from 180deg at 50% 50%, #4f46e5, #8b5cf6, #6366f1, #a78bfa, #4f46e5); }
-.m3  { background: radial-gradient(circle at 45% 40%, #c4b5fd 0%, #6366f1 55%, #1e1b4b 100%); }
-.m4  { background: radial-gradient(circle at 60% 60%, #ddd6fe 0%, #818cf8 40%, #1e1b4b 100%); }
-.m5  { background: linear-gradient(145deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); }
-.m6  { background: linear-gradient(145deg, #4338ca 0%, #6366f1 60%, #818cf8 100%); }
-.m7  { background: conic-gradient(from 90deg at 50% 50%, #3b0764, #7c3aed, #8b5cf6, #3b0764); }
-.m8  { background: radial-gradient(circle at 55% 45%, #ede9fe 0%, #a78bfa 45%, #4c1d95 100%); }
-.m9  { background: radial-gradient(circle at 30% 70%, #c4b5fd 0%, #7c3aed 50%, #2e1065 100%); }
-.m10 { background: linear-gradient(135deg, #4f46e5 0%, #6366f1 40%, #a78bfa 100%); }
+.m1  { background: url('img_seo_text_1.jpg') center / cover no-repeat; }
+.m2  { background: url('img_seo_text_2.jpg') center / cover no-repeat; }
+.m3  { background: url('img_seo_text_3.jpg') center / cover no-repeat; }
+.m4  { background: url('img_seo_text_4.jpg') center / cover no-repeat; }
+.m5  { background: url('img_seo_text_5.jpg') center / cover no-repeat; }
+.m6  { background: url('img_seo_text_6.jpg') center / cover no-repeat; }
+.m7  { background: url('img_seo_text_7.jpg') center / cover no-repeat; }
+.m8  { background: url('img_seo_text_8.jpg') center / cover no-repeat; }
+.m9  { background: url('img_seo_text_9.jpg') center / cover no-repeat; }
+.m10 { background: url('img_seo_text_10.jpg') center / cover no-repeat; }
 
 .module-card__name {
   font-size: 18px;
@@ -601,9 +601,9 @@ img {
   flex-shrink: 0;
 }
 
-.h1 { background: linear-gradient(135deg, #c9d0f0 0%, #e0d4f5 50%, #d4e8f5 100%); }
-.h2 { background: linear-gradient(135deg, #c9d0f0 0%, #e0d4f5 50%, #d4e8f5 100%); }
-.h3 { background: linear-gradient(135deg, #c9d0f0 0%, #e0d4f5 50%, #d4e8f5 100%); }
+.h1 { background: url('img_seo_highlights_1.jpg') center / cover no-repeat; }
+.h2 { background: url('img_seo_highlights_2.jpg') center / cover no-repeat; }
+.h3 { background: url('img_seo_highlights_3.jpg') center / cover no-repeat; }
 
 .highlight-card__tag {
   display: block;
@@ -703,7 +703,7 @@ img {
 .crossbrand__img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, #b8d4f5 0%, #c9b8f5 40%, #8ab8f5 100%);
+  background: url('img_seo_gamification_1.jpg') center / cover no-repeat;
 }
 
 /* ===== MODAL ===== */
