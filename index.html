@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heaven Flow</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <!-- Layout start: 2026-03-21 11:33 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -49,17 +49,18 @@
     <div class="container">
       <div class="header__inner">
         <a href="#" class="logo">
-          <img src="logo.svg" alt="Heaven Flow" class="logo__img" width="40" height="45">
+          <img src="img/logo.svg" alt="Heaven Flow" class="logo__img" width="40" height="45">
           <span class="logo__text">HEAVEN FLOW</span>
         </a>
 
-        <nav class="nav">
+        <nav class="nav" id="mainNav">
           <a href="#" class="nav__link">Crash</a>
           <a href="#" class="nav__link">Live Casino</a>
           <span class="nav__link nav__link--dropdown">
             TOP Providers
             <svg width="12" height="12"><use href="#icon-chevron-down"/></svg>
           </span>
+          <a href="#" class="btn btn--green js-open-modal nav__btn-mobile">Register Now</a>
         </nav>
 
         <div class="header__actions">
@@ -84,14 +85,6 @@
     </div>
   </header>
 
-  <!-- Mobile nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#" class="nav__link">Crash</a>
-    <a href="#" class="nav__link">Live Casino</a>
-    <a href="#" class="nav__link">TOP Providers</a>
-    <a href="#" class="btn btn--green" style="align-self: flex-start;">Register Now</a>
-  </div>
-
   <!-- ===== 2. HERO ===== -->
   <section class="hero">
     <div class="container">
@@ -106,7 +99,7 @@
         </div>
 
         <div class="hero__visual">
-          <img src="img_hero.png" alt="" class="hero__blob">
+          <img src="img/img_hero.png" alt="" class="hero__blob">
         </div>
       </div>
     </div>
@@ -260,56 +253,6 @@
     </div>
   </section>
 
-  <script>
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    hamburger.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-    });
-
-    // Language dropdown
-    const langToggle = document.getElementById('langToggle');
-    langToggle.addEventListener('click', (e) => {
-      langToggle.classList.toggle('open');
-      e.stopPropagation();
-    });
-    document.querySelectorAll('.lang__option').forEach(opt => {
-      opt.addEventListener('click', () => {
-        langToggle.querySelector('.lang__current').childNodes[0].textContent = opt.textContent + ' ';
-        document.querySelectorAll('.lang__option').forEach(o => o.classList.remove('lang__option--active'));
-        opt.classList.add('lang__option--active');
-        langToggle.classList.remove('open');
-      });
-    });
-    document.addEventListener('click', () => langToggle.classList.remove('open'));
-
-    // TOC toggle
-    document.getElementById('tocToggle').addEventListener('click', () => {
-      document.querySelector('.toc').classList.toggle('open');
-    });
-
-    // Promo bar + scroll-to-top
-    const promoBar = document.querySelector('.promo-bar');
-    const scrollBtn = document.querySelector('.promo-bar__scroll');
-    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    window.addEventListener('scroll', () => {
-      promoBar.classList.toggle('visible', window.scrollY > 300);
-    });
-
-    // Tab switching
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(t => {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-      });
-    });
-  </script>
-
   <!-- MODAL -->
   <div class="modal-overlay" id="modalOverlay"></div>
   <div class="modal" id="registerModal" role="dialog" aria-modal="true">
@@ -324,18 +267,7 @@
     </form>
   </div>
 
-  <script>
-    // Modal
-    const modal = document.getElementById('registerModal');
-    const modalOverlay = document.getElementById('modalOverlay');
-    function openModal() { modal.classList.add('open'); modalOverlay.classList.add('open'); }
-    function closeModal() { modal.classList.remove('open'); modalOverlay.classList.remove('open'); }
-    document.querySelectorAll('.js-open-modal').forEach(btn => {
-      btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
-    });
-    document.getElementById('modalClose').addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', closeModal);
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
